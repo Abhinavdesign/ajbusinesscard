@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import FooterC from '../components/FooterC'; // Import the new FooterC component
 import DownloadModal from '../components/DownloadModal'; // Import the DownloadModal component
+import Image from 'next/image'; // Import Image from next/image
 import './contactus.css'; // Import the scoped CSS
 
 const ContactUs: React.FC = () => {
@@ -98,52 +99,66 @@ const ContactUs: React.FC = () => {
       </video>
       <div className="container">
         <div className="icon-group">
-          <img
+          <Image
             src="/Phoneicon.png"
             alt="Phone Icon"
             className="icon"
+            width={80}
+            height={80}
           />
-          <img
+          <Image
             src="/Phoneno.png"
             alt="Phone Number"
             className="text"
+            width={700}
+            height={150}
           />
         </div>
         <div className="icon-group">
-          <img
+          <Image
             src="/emailicon.png"
             alt="Email Icon"
             className="icon"
+            width={80}
+            height={80}
           />
-          <img
+          <Image
             src="/emailid.png"
             alt="Email ID"
             className="text"
+            width={700}
+            height={150}
           />
         </div>
       </div>
       <div className="top-icons">
         <button onClick={handleDownloadClick} className="top-icon">
-          <img
+          <Image
             src="/download.png"
             alt="Download Icon"
+            width={30}
+            height={30}
           />
         </button>
         <Link href="/project" legacyBehavior>
           <a>
-            <img
+            <Image
               src="/projecticon.png"
               alt="Project Icon"
               className="top-icon"
+              width={30}
+              height={30}
             />
           </a>
         </Link>
         <Link href="/" legacyBehavior>
           <a>
-            <img
+            <Image
               src="/home.png"
               alt="Home Icon"
               className="top-icon"
+              width={30}
+              height={30}
             />
           </a>
         </Link>

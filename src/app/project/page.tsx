@@ -1,4 +1,3 @@
-// /Users/abhinavjha/Documents/cherry-business-card/src/app/project/page.tsx
 'use client';
 
 import { NextPage } from 'next';
@@ -6,6 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import FooterC from '../components/FooterC'; // Adjust the path as necessary
+import Image from 'next/image'; // Import Image from next/image
 import './project.css'; // Import the scoped CSS
 
 const Project: NextPage = () => {
@@ -33,12 +33,12 @@ const Project: NextPage = () => {
       <div className="top-right-icons">
         <Link href="/" legacyBehavior>
           <a>
-            <img src="/home.png" alt="Home" className="icon" />
+            <Image src="/home.png" alt="Home" className="icon" width={24} height={24} />
           </a>
         </Link>
         <Link href="/ContactUs" legacyBehavior>
           <a>
-            <img src="/contact.png" alt="Contact" className="icon" />
+            <Image src="/contact.png" alt="Contact" className="icon" width={24} height={24} />
           </a>
         </Link>
       </div>
