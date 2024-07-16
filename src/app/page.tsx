@@ -27,6 +27,9 @@ const Home: NextPage = () => {
           layout="fill"
           objectFit="cover"
           className="background-image"
+          priority // Preload the image
+          placeholder="blur" // Add a placeholder
+          blurDataURL="/path/to/low-res-image.jpg" // Provide a low-res image for the blur effect
         />
         <Logo />
         <Image
@@ -36,6 +39,7 @@ const Home: NextPage = () => {
           height={125}
           className="absolute"
           style={{ top: '0rem', left: '9rem' }}
+          priority // Preload the image
         />
         <TextWithStyle />
         <div className="absolute" style={{ top: '3rem', right: '5rem' }}>

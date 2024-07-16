@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* src/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 html,
 body {
   padding: 0;
@@ -89,9 +92,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
-/* src/app/globals.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
   font-family: 'Poppins', sans-serif;
