@@ -1,7 +1,4 @@
-"use client";
-
 import { NextPage } from 'next';
-import { useEffect } from 'react';
 import Head from 'next/head';
 import Logo from './components/Logo';
 import ArrowAnimation from './components/ArrowAnimation';
@@ -9,20 +6,10 @@ import TextWithStyle from './components/TextWithStyle';
 import Footer from './components/Footer';
 
 const Home: NextPage = () => {
-  useEffect(() => {
-    // Add no-scroll style to body
-    document.body.style.overflowY = 'hidden';
-
-    // Cleanup function to remove the no-scroll style when the component unmounts
-    return () => {
-      document.body.style.overflowY = 'auto';
-    };
-  }, []);
-
   return (
     <div 
       className="relative w-screen h-screen" 
-      style={{ overflowX: 'auto' }}
+      style={{ overflowX: 'auto', overflowY: 'hidden' }}
     >
       <Head>
         <title>Homepage</title>
@@ -32,7 +19,7 @@ const Home: NextPage = () => {
       <div
         className="relative flex justify-center items-center"
         style={{
-          height: 'calc(100vh - 50px)', // Adjust to leave space for the footer
+          height: '100vh',
           width: 'calc(100vh * (16 / 9))',
           minWidth: '100vw',
         }}
@@ -57,8 +44,8 @@ const Home: NextPage = () => {
         <div className="absolute" style={{ top: '50%', right: '10rem', transform: 'translateY(-50%)' }}>
           <ArrowAnimation />
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };
