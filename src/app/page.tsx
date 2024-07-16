@@ -1,7 +1,4 @@
-"use client";
-
 import { NextPage } from 'next';
-import { useEffect } from 'react';
 import Head from 'next/head';
 import Logo from './components/Logo';
 import ArrowAnimation from './components/ArrowAnimation';
@@ -9,16 +6,6 @@ import TextWithStyle from './components/TextWithStyle';
 import Footer from './components/Footer';
 
 const Home: NextPage = () => {
-  useEffect(() => {
-    // Add no-scroll class to body
-    document.body.classList.add('no-scroll');
-
-    // Cleanup function to remove the no-scroll class when the component unmounts
-    return () => {
-      document.body.classList.remove('no-scroll');
-    };
-  }, []);
-
   return (
     <div 
       className="relative w-screen h-screen" 
