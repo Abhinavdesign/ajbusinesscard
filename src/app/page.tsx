@@ -38,7 +38,9 @@ const Home: NextPage = () => {
         <div className="absolute arrow-animation-container">
           <ArrowAnimation />
         </div>
-        <Footer />
+        <div className="footer-container">
+          <Footer />
+        </div>
       </div>
     </div>
   );

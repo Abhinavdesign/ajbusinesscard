@@ -124,6 +124,12 @@ body {
   transform: translateY(-50%);
 }
 
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
