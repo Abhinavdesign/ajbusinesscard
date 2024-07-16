@@ -23,78 +23,15 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden; /* Prevent vertical scrolling */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
 }
 
 .content-container {
   position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-.glow-text {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7);
-}
-
-.green-neon-text {
-  color: #39ff14;
-  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 80px #39ff14;
-  font-family: 'Brush Script MT', cursive;
-  transform: rotate(-10deg);
-}
-
-.bluish-glow-text {
-  text-shadow: 0 0 10px rgba(0, 0, 255, 0.7), 0 0 20px rgba(0, 0, 255, 0.7), 0 0 30px rgba(0, 0, 255, 0.7);
-  font-family: 'Arial', sans-serif;
-}
-
-.html-style-text {
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  font-style: italic;
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7);
-}
-
-.projects-text {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 1rem; /* Adjust size as needed */
-  color: white;
-}
-
-@keyframes arrowBlink1 {
-  0%, 100% { color: red; }
-  33% { color: green; }
-  66% { color: orange; }
-}
-
-@keyframes arrowBlink2 {
-  0%, 100% { color: green; }
-  33% { color: orange; }
-  66% { color: red; }
-}
-
-@keyframes arrowBlink3 {
-  0%, 100% { color: orange; }
-  33% { color: red; }
-  66% { color: green; }
-}
-
-.arrow-animate-1 {
-  animation: arrowBlink1 1s infinite;
-}
-
-.arrow-animate-2 {
-  animation: arrowBlink2 1s infinite;
-}
-
-.arrow-animate-3 {
-  animation: arrowBlink3 1s infinite;
-}
-
-.stylish-projects-text {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.75rem; /* Smaller font size */
-  color: white;
+  height: 100vh;
+  width: calc(100vh * (16 / 9)); /* Maintain 16:9 aspect ratio */
+  min-width: 100vw;
 }
 
 .background-image {
@@ -136,20 +73,4 @@ body {
 
 body {
   font-family: 'Poppins', sans-serif;
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  .content-container {
-    height: 100%;
-    width: 100%;
-  }
-
-  .footer-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Add background to ensure visibility */
-    z-index: 10;
-  }
 }

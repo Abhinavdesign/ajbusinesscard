@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image'; // Import Image from next/image
+import Image from 'next/image';
 import Logo from './components/Logo';
 import ArrowAnimation from './components/ArrowAnimation';
 import TextWithStyle from './components/TextWithStyle';
@@ -15,13 +15,13 @@ const Home: NextPage = () => {
       </Head>
       <div className="content-container">
         <Image
-          src="/Learn with us.png"
+          src="/Learn_with_us.png"
           alt="Learn with Us"
           layout="fill"
           objectFit="cover"
           className="background-image"
-          priority // Preload the image
-          quality={100} // Ensure high quality
+          priority
+          quality={100}
         />
         <Logo />
         <Image
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           width={125}
           height={125}
           className="absolute aj-image"
-          priority // Preload the image
+          priority
         />
         <TextWithStyle />
         <div className="absolute open-text-container">
@@ -40,9 +40,7 @@ const Home: NextPage = () => {
           <ArrowAnimation />
         </div>
       </div>
-      <div className="footer-container">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };
