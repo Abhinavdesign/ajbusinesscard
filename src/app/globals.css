@@ -12,72 +12,41 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden; /* Prevent vertical scrolling */
 }
 
 * {
   box-sizing: border-box;
 }
 
-.home-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow-x: auto; /* Allow horizontal scrolling */
-  overflow-y: hidden; /* Prevent vertical scrolling */
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7);
 }
 
-.content-container {
-  position: relative;
-  height: 100vh;
-  width: calc(100vh * (16 / 9)); /* Maintain 16:9 aspect ratio */
-  min-width: 100vw;
+.green-neon-text {
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 80px #39ff14;
+  font-family: 'Brush Script MT', cursive;
+  transform: rotate(-10deg);
 }
 
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.bluish-glow-text {
+  text-shadow: 0 0 10px rgba(0, 0, 255, 0.7), 0 0 20px rgba(0, 0, 255, 0.7), 0 0 30px rgba(0, 0, 255, 0.7);
+  font-family: 'Arial', sans-serif;
 }
 
-.aj-image {
-  top: 0rem;
-  left: 9rem;
+.html-style-text {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7);
 }
 
-.open-text-container {
-  top: 3rem;
-  right: 5rem;
+.projects-text {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1rem; /* Adjust size as needed */
+  color: white;
 }
 
-.arrow-animation-container {
-  top: 50%;
-  right: 10rem;
-  transform: translateY(-50%);
-}
-
-.footer-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.5); /* Optional: Add background to ensure visibility */
-  z-index: 10;
-  white-space: nowrap; /* Prevent text wrapping */
-  text-align: center; /* Center align text */
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Arrow animation styles */
 @keyframes arrowBlink1 {
   0%, 100% { color: red; }
   33% { color: green; }
@@ -108,59 +77,25 @@ body {
   animation: arrowBlink3 1s infinite;
 }
 
-.green-neon-text {
-  color: #39ff14;
-  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 80px #39ff14;
-  font-family: 'Brush Script MT', cursive;
-  transform: rotate(-10deg);
-}
-
-.bluish-glow-text {
-  text-shadow: 0 0 10px rgba(0, 0, 255, 0.7), 0 0 20px rgba(0, 0, 255, 0.7), 0 0 30px rgba(0, 0, 255, 0.7);
-  font-family: 'Arial', sans-serif;
-}
-
-.html-style-text {
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  font-style: italic;
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7);
-}
-
-.projects-text {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 1rem;
-  color: white;
-}
-
 .stylish-projects-text {
   font-family: 'Roboto', sans-serif;
   font-size: 0.75rem; /* Smaller font size */
   color: white;
 }
 
-.glow-text {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7);
+/* Ensure the background image covers the entire viewport */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  .content-container {
-    height: 100vh;
-    width: calc(100vh * (16 / 9)); /* Maintain 16:9 aspect ratio */
-    min-width: 100vw;
-  }
+/* src/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-  .footer-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Add background to ensure visibility */
-    z-index: 10;
-    white-space: nowrap; /* Prevent text wrapping */
-    text-align: center; /* Center align text */
-  }
+body {
+  font-family: 'Poppins', sans-serif;
 }
