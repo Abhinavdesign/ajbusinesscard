@@ -23,15 +23,13 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden; /* Prevent vertical scrolling */
+  overflow: hidden; /* Prevent vertical scrolling */
 }
 
 .content-container {
   position: relative;
-  height: 100vh;
-  width: calc(100vh * (16 / 9));
-  min-width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .glow-text {
@@ -143,13 +141,15 @@ body {
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   .content-container {
-    height: auto;
+    height: 100%;
     width: 100%;
   }
 
   .footer-container {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add background to ensure visibility */
+    z-index: 10;
   }
 }
