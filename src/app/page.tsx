@@ -7,10 +7,11 @@ import Footer from './components/Footer';
 
 const Home: NextPage = () => {
   return (
-    <div className="relative w-screen h-screen overflow-x-auto overflow-y-hidden">
+    <div className="relative w-screen h-screen" style={{ overflowX: 'auto', overflowY: 'hidden' }}>
       <Head>
         <title>Homepage</title>
         <meta name="description" content="Sample homepage" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div
         className="relative flex justify-center items-center"
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
           src="/Learn with us.png"
           alt="Learn with Us"
           className="background-image"
+          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <Logo />
         <img
