@@ -128,10 +128,28 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
   background: rgba(0, 0, 0, 0.5); /* Optional: Add background to ensure visibility */
   z-index: 10;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .content-container {
+    height: auto;
+    width: 100%;
+  }
+
+  .footer-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 }

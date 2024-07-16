@@ -21,6 +21,7 @@ const Home: NextPage = () => {
           objectFit="cover"
           className="background-image"
           priority // Preload the image
+          quality={100} // Ensure high quality
         />
         <Logo />
         <Image
