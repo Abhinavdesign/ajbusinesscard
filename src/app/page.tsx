@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Logo from './components/Logo';
 import ArrowAnimation from './components/ArrowAnimation';
 import TextWithStyle from './components/TextWithStyle';
@@ -24,18 +25,21 @@ const Home: NextPage = () => {
           minWidth: '100vw',
         }}
       >
-        <img
+        <Image
           src="/Learn with us.png"
           alt="Learn with Us"
-          className="background-image"
-          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+          layout="fill"
+          objectFit="cover"
+          style={{ position: 'absolute', top: 0, left: 0 }}
         />
         <Logo />
-        <img
+        <Image
           src="/Aj.png"
           alt="Aj Image"
+          width={125}
+          height={125}
           className="absolute"
-          style={{ top: '0rem', left: '9rem', width: '125px', height: '125px' }} // Adjust the size and position accordingly
+          style={{ top: '0rem', left: '9rem' }} // Adjust the size and position accordingly
         />
         <TextWithStyle />
         <div className="absolute" style={{ top: '3rem', right: '5rem' }}>
