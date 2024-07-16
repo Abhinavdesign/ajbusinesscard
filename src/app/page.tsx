@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="content-container">
         <Image
-          src="/Learn_with_us.png"
+          src="/Learn with us.png"
           alt="Learn with Us"
           layout="fill"
           objectFit="cover"
