@@ -1,0 +1,136 @@
+/* src/app/contactus.css */
+
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 40%;
+  left: 220px;
+  transform: translateY(-10%);
+  width: 100%;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px; /* Space between phone and email groups */
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  margin-right: 300px; /* Space between icon and text */
+}
+
+.text {
+  width: 700px;
+  height: 150px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .icon {
+    width: 120px;
+    height: 120px;
+    margin-right: 250px; /* Adjusted space for smaller icon */
+  }
+
+  .text {
+    width: 600px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+  }
+
+  .icon-group {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 0; /* Remove horizontal gap in vertical layout */
+    margin-bottom: 20px; /* Space between icon and text */
+  }
+
+  .text {
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.top-icons {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  right: 10px; /* Adjust the right position as needed */
+  display: flex;
+  gap: 10px; /* Space between the icons */
+  z-index: 10; /* Ensure they appear above other elements */
+}
+
+.top-icon {
+  width: 30px; /* Adjust the size as needed */
+  height: 30px; /* Adjust the size as needed */
+  cursor: pointer;
+}
+
+/* Make icons slightly bigger on phones */
+@media (max-width: 600px) {
+  .top-icon {
+    width: 20px; /* Adjust the size for phones */
+    height: 20px; /* Adjust the size for phones */
+  }
+}
+
+/* Footer styles */
+.contactUsFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-size: 2vw; /* Responsive font size */
+  color: grey; /* Grey text color */
+  font-family: 'Montserrat', sans-serif; /* Match the font style of Footer component */
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  padding: 1rem; /* Optional padding */
+  overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+.contactUsFooter span {
+  margin: 0 1rem; /* Optional spacing between items */
+}
+
+.footer-container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}

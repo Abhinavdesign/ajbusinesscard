@@ -1,0 +1,68 @@
+/* src/app/project/project.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.projectFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-size: 1.5vw; /* Smaller responsive font size for larger screens */
+  color: grey; /* Grey text color */
+  font-family: 'Montserrat', sans-serif; /* Match the font style of Footer component */
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  padding: 1rem; /* Optional padding */
+  overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+.projectFooter span {
+  margin: 0 1rem; /* Optional spacing between items */
+}
+
+.footer-container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.trademark {
+  position: absolute;
+  top: -1rem;
+  right: -2rem;
+  color: black;
+}
+
+/* Adjust trademark position for smaller screens */
+@media (max-width: 768px) {
+  .trademark {
+    top: -0.5rem;
+    right: -1rem;
+  }
+}
+
+/* Icon styling */
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.top-right-icons {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+/* Make icons slightly bigger on phones */
+@media (max-width: 600px) {
+  .icon {
+    width: 24px; /* Adjust the size for phones */
+    height: 24px; /* Adjust the size for phones */
+  
+  }
+}
