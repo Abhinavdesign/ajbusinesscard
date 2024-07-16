@@ -8,19 +8,12 @@ import Footer from './components/Footer';
 
 const Home: NextPage = () => {
   return (
-    <div className="relative w-screen h-screen overflow-x-auto overflow-y-hidden">
+    <div className="home-container">
       <Head>
         <title>Homepage</title>
         <meta name="description" content="Sample homepage" />
       </Head>
-      <div
-        className="relative flex justify-center items-center"
-        style={{
-          height: '100vh',
-          width: 'calc(100vh * (16 / 9))',
-          minWidth: '100vw',
-        }}
-      >
+      <div className="content-container">
         <Image
           src="/Learn with us.png"
           alt="Learn with Us"
@@ -28,8 +21,6 @@ const Home: NextPage = () => {
           objectFit="cover"
           className="background-image"
           priority // Preload the image
-          placeholder="blur" // Add a placeholder
-          blurDataURL="/path/to/low-res-image.jpg" // Provide a low-res image for the blur effect
         />
         <Logo />
         <Image
@@ -37,15 +28,14 @@ const Home: NextPage = () => {
           alt="Aj Image"
           width={125}
           height={125}
-          className="absolute"
-          style={{ top: '0rem', left: '9rem' }}
+          className="absolute aj-image"
           priority // Preload the image
         />
         <TextWithStyle />
-        <div className="absolute" style={{ top: '3rem', right: '5rem' }}>
+        <div className="absolute open-text-container">
           <div className="green-neon-text">We are open</div>
         </div>
-        <div className="absolute" style={{ top: '50%', right: '10rem', transform: 'translateY(-50%)' }}>
+        <div className="absolute arrow-animation-container">
           <ArrowAnimation />
         </div>
         <Footer />
