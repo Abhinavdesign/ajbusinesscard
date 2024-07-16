@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* src/app/globals.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 html,
@@ -68,6 +69,8 @@ body {
   padding: 1rem;
   background: rgba(0, 0, 0, 0.5); /* Optional: Add background to ensure visibility */
   z-index: 10;
+  white-space: nowrap; /* Prevent text wrapping */
+  text-align: center; /* Center align text */
 }
 
 body {
@@ -149,10 +152,15 @@ body {
   }
 
   .footer-container {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: rgba(0, 0, 0, 0.5); /* Optional: Add background to ensure visibility */
     z-index: 10;
+    white-space: nowrap; /* Prevent text wrapping */
+    text-align: center; /* Center align text */
   }
 }

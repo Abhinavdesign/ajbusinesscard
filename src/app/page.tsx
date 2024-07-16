@@ -12,10 +12,11 @@ const Home: NextPage = () => {
       <Head>
         <title>Homepage</title>
         <meta name="description" content="Sample homepage" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> {/* Add the viewport meta tag */}
       </Head>
       <div className="content-container">
         <Image
-          src="/Learn with us.png"
+          src="/Learn_with_us.png"
           alt="Learn with Us"
           layout="fill"
           objectFit="cover"
