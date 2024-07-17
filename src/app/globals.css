@@ -113,4 +113,23 @@ body {
 body {
   font-family: 'Poppins', sans-serif;
 }
+/* Default footer styling */
+.footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 60%;
+}
+
+/* Adjust footer position for mobile devices */
+@media (max-width: 768px) {
+  .footer {
+    bottom: 40px; /* Move the footer 2rem upwards */
+  }
+}
 
