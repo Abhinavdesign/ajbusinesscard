@@ -129,7 +129,7 @@ body {
 /* Adjust footer position for mobile devices */
 @media (max-width: 768px) {
   .footer {
-    bottom: 40px; /* Move the footer 2rem upwards */
+    bottom: 100px; /* Move the footer 2rem upwards */
   }
 }
 
