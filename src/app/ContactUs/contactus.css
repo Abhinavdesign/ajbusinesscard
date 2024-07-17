@@ -134,3 +134,8 @@ body {
   position: absolute;
   bottom: 0;
 }
+@media (max-width: 768px) {
+  .contactUsFooter {
+    bottom: 80px; /* Move the footer 2rem upwards */
+  }
+}

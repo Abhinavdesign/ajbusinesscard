@@ -66,3 +66,8 @@
   
   }
 }
+@media (max-width: 768px) {
+  .projectFooter {
+    bottom: 80px; /* Move the footer 2rem upwards */
+  }
+}
