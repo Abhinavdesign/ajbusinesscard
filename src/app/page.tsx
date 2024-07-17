@@ -8,46 +8,34 @@ import Footer from './components/Footer';
 
 const Home: NextPage = () => {
   return (
-    <div 
-      className="relative w-screen h-screen" 
-      style={{ overflowX: 'auto', overflowY: 'hidden' }}
-    >
+    <div style={{ overflowX: 'auto', overflowY: 'hidden', width: '100vw', height: '100vh', backgroundColor: 'grey' }}>
       <Head>
         <title>Homepage</title>
         <meta name="description" content="Sample homepage" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </Head>
       <div
-        className="relative flex justify-center items-center"
         style={{
-          height: '100vh',
-          width: 'calc(100vh * (16 / 9))',
-          minWidth: '100vw',
+          position: 'relative',
+          height: '100%',
+          width: 'calc(100vh * 16 / 9)', // Ensure the container width maintains the aspect ratio
         }}
       >
         <Image
           src="/Learn with us.png"
           alt="Learn with Us"
-          layout="fill"
-          objectFit="cover"
-          style={{ position: 'absolute', top: 0, left: 0 }}
+          fill
+          unoptimized
+          style={{ objectFit: 'cover' }}
         />
         <Logo />
-        <Image
-          src="/Aj.png"
-          alt="Aj Image"
-          width={125}
-          height={125}
-          className="absolute"
-          style={{ top: '0rem', left: '9rem' }} // Adjust the size and position accordingly
-        />
-        <TextWithStyle />
-        <div className="absolute" style={{ top: '3rem', right: '5rem' }}>
-          <div className="green-neon-text">We are open</div>
-        </div>
-        <div className="absolute" style={{ top: '50%', right: '10rem', transform: 'translateY(-50%)' }}>
+        <div style={{ position: 'absolute', top: '50%', right: '7rem', transform: 'translateY(-50%)' }}>
           <ArrowAnimation />
         </div>
+        <div style={{ position: 'absolute', top: '5rem', right: '5rem' }} className="green-neon-text">
+          We are open
+        </div>
+        <TextWithStyle />
         <Footer />
       </div>
     </div>

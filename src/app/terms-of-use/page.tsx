@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const TermsOfUse: React.FC = () => {
   return (
-    <div className="relative bg-light-green-bluish p-6 leading-relaxed">
+    <div className="relative bg-light-green-bluish p-6 leading-relaxed" style={{ overflowY: 'auto', height: '100vh' }}>
       <Link href="/" legacyBehavior>
         <a className="absolute top-4 right-4 transform -translate-y-2 text-blue-600 hover:underline">Back</a>
       </Link>

@@ -2,16 +2,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@keyframes arrowBlink1 {
+  0%, 100% { color: red; }
+  33% { color: green; }
+  66% { color: orange; }
+}
+
+@keyframes arrowBlink2 {
+  0%, 100% { color: green; }
+  33% { color: orange; }
+  66% { color: red; }
+}
+
+@keyframes arrowBlink3 {
+  0%, 100% { color: orange; }
+  33% { color: red; }
+  66% { color: green; }
+}
 
 /* src/app/globals.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-html,
-body {
-  padding: 0;
+:root {
+  --vh: 100vh; /* Default value */
+}
+
+
+html, body {
   margin: 0;
+  padding: 0;
   height: 100%;
   width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body is at least as tall as the viewport */
+}
+
+.container-home {
+  flex: 1;
+  height: calc(var(--vh, 1vh) * 100); /* Use the CSS variable for height */
+  width: calc(100vh * 16 / 9); /* Width based on the 16:9 aspect ratio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure no overflow within the container */
 }
 
 * {
@@ -47,23 +87,7 @@ body {
   color: white;
 }
 
-@keyframes arrowBlink1 {
-  0%, 100% { color: red; }
-  33% { color: green; }
-  66% { color: orange; }
-}
 
-@keyframes arrowBlink2 {
-  0%, 100% { color: green; }
-  33% { color: orange; }
-  66% { color: red; }
-}
-
-@keyframes arrowBlink3 {
-  0%, 100% { color: orange; }
-  33% { color: red; }
-  66% { color: green; }
-}
 
 .arrow-animate-1 {
   animation: arrowBlink1 1s infinite;
@@ -83,18 +107,8 @@ body {
   color: white;
 }
 
-/* Ensure the background image covers the entire viewport */
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* src/app/globals.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
   font-family: 'Poppins', sans-serif;
