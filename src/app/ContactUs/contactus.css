@@ -116,7 +116,7 @@ body {
   align-items: center;
   white-space: nowrap; /* Prevent text from wrapping */
   font-size: 2vw; /* Responsive font size */
-  color: grey; /* Grey text color */
+  color: black; /* Grey text color */
   font-family: 'Montserrat', sans-serif; /* Match the font style of Footer component */
   text-align: center;
   position: relative;
@@ -136,6 +136,6 @@ body {
 }
 @media (max-width: 768px) {
   .contactUsFooter {
-    bottom: 80px; /* Move the footer 2rem upwards */
+    bottom: 60px; /* Move the footer 2rem upwards */
   }
 }

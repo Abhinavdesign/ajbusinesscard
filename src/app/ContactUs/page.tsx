@@ -6,7 +6,7 @@ import Link from 'next/link';
 import FooterC from '../components/FooterC'; // Import the new FooterC component
 import DownloadModal from '../components/DownloadModal'; // Import the DownloadModal component
 import Image from 'next/image'; // Import Image from next/image
-import './contactus.css'; // Import the scoped CSS
+import './contactus.css';// Import the scoped CSS
 
 const ContactUs: React.FC = () => {
   const [showDownloadModal, setShowDownloadModal] = useState(false);

@@ -33,12 +33,12 @@ const Project: NextPage = () => {
       <div className="top-right-icons">
         <Link href="/" legacyBehavior>
           <a>
-            <Image src="/home.png" alt="Home" className="icon" width={24} height={24} />
+            <Image src="/home.png" alt="Home" className="iconp" width={30} height={30}/>
           </a>
         </Link>
         <Link href="/ContactUs" legacyBehavior>
           <a>
-            <Image src="/contact.png" alt="Contact" className="icon" width={24} height={24} />
+            <Image src="/contact.png" alt="Contact" className="iconp" width={30} height={30}/>
           </a>
         </Link>
       </div>
