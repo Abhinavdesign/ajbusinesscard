@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -12,14 +12,6 @@ import Preloader from './components/Preloader';
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
-  const imagesToLoad = useRef(1); // Start with 1 to account for initial state
-
-  const handleImageLoad = () => {
-    imagesToLoad.current -= 1;
-    if (imagesToLoad.current === 0) {
-      setLoading(false);
-    }
-  };
 
   useEffect(() => {
     const handleLoad = () => {
@@ -28,19 +20,17 @@ const Home: NextPage = () => {
     };
 
     if (document.readyState === 'complete') {
+      // If the page is already loaded, call handleLoad immediately
       handleLoad();
     } else {
+      // Listen for the window load event
       window.addEventListener('load', handleLoad);
 
+      // Clean up the event listener
       return () => {
         window.removeEventListener('load', handleLoad);
       };
     }
-  }, []);
-
-  // Increase the count for each image you want to track
-  useEffect(() => {
-    imagesToLoad.current += 1;
   }, []);
 
   return (
@@ -64,7 +54,6 @@ const Home: NextPage = () => {
             alt="Learn with Us"
             fill
             unoptimized
-            onLoad={handleImageLoad}
             style={{ objectFit: 'cover' }}
           />
           <Logo />
