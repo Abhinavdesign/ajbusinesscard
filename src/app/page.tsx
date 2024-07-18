@@ -20,7 +20,7 @@ const Home: NextPage = () => {
     };
 
     if (document.readyState === 'complete') {
-      // The page is already fully loaded
+      // If the page is already loaded, call handleLoad immediately
       handleLoad();
     } else {
       // Listen for the window load event

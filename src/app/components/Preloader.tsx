@@ -1,4 +1,3 @@
-// src/app/components/Preloader.tsx
 'use client';
 
 import React from 'react';
