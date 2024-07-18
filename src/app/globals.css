@@ -132,4 +132,28 @@ body {
     bottom: 100px; /* Move the footer 2rem upwards */
   }
 }
+@keyframes colorChange {
+  0% {
+    color: blue;
+  }
+  33% {
+    color: greenyellow;
+  }
+  66% {
+    color: rgb(211, 16, 182);
+  }
+  100% {
+    color: blue;
+  }
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid currentColor;
+  margin-left: 10px;
+  animation: colorChange 1s infinite;
+}
 
