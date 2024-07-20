@@ -34,13 +34,13 @@ const TermsOfUse: React.FC = () => {
           <p><strong>Service</strong> refers to the Website.</p>
         </li>
         <li className="mt-2">
-          <p><strong>Terms and Conditions</strong> (also referred as &quot;Terms&quot;) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the <a href="https://www.termsfeed.com/terms-conditions-generator/" target="_blank" className="text-blue-600 hover:underline">Terms and Conditions Generator</a>.</p>
+          <p><strong>Terms and Conditions</strong> (also referred as &quot;Terms&quot;) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.</p>
         </li>
         <li className="mt-2">
           <p><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</p>
         </li>
         <li className="mt-2">
-          <p><strong>Website</strong> refers to AJDesign, accessible from <a href="https://www.ajdesign.website" rel="external nofollow noopener" target="_blank" className="text-blue-600 hover:underline">https://www.ajdesign.website</a></p>
+          <p><strong>Website</strong> refers to AJDesign or Abhinav Jha, accessible from <a href="https://www.ajdesign.website" rel="external nofollow noopener" target="_blank" className="text-blue-600 hover:underline">https://www.ajdesign.website</a></p>
         </li>
         <li className="mt-2">
           <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
