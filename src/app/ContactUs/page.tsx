@@ -72,8 +72,8 @@ const ContactUs: React.FC = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Brouchure.pdf'; // Adjust the path according to your setup
-    link.download = 'Brouchure.pdf';
+    link.href = '/Brochure.pdf'; // Adjust the path according to your setup
+    link.download = 'Brochure.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
